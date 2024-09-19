@@ -62,10 +62,29 @@ public class Loader_Worldgen implements Runnable {
 		, new StoneLayerOres(MT.Emerald                                 , F, U64,  0, 32, ST.block(MD.EtFu, "deepslate_emerald_ore"), BIOMES_MOUNTAINS)
 		, new StoneLayerOres(MT.Diamond                                 , F, U64,  0, 12, ST.block(MD.EtFu, "deepslate_diamond_ore"), BIOMES_JUNGLE, BIOMES_VOLCANIC)
 		, new StoneLayerOres(MT.Lapis                                   , F, U12, 16, 24, ST.block(MD.EtFu, "deepslate_lapis_ore"), BIOMES_FROZEN, BIOMES_TAIGA)
+		, new StoneLayerOres(MT.Amber                                   , F, U32, 16, 24, ST.block(MD.EtFu, "deepslate_thaumcraft_ore"), 7, BIOMES_OCEAN_BEACH)
 		, new StoneLayerOres(MT.Redstone                                , F, U16,  0, 20, ST.block(MD.EtFu, "deepslate_redstone_ore"))
+		, new StoneLayerOres(MT.OREMATS.Cinnabar                        , F, U64,  0, 20, ST.block(MD.EtFu, "deepslate_thaumcraft_ore"), 0, BIOMES_MESA, BIOMES_TAIGA, BIOMES_VOLCANIC, BIOMES_MAGICAL)
+		, new StoneLayerOres(MT.OREMATS.Cooperite                       , F, U64,  0, 12, ST.block(MD.EtFu, "modded_deepslate_ore"), 5, BIOMES_VOLCANIC)
+		, new StoneLayerOres(MT.Mithril                                 , F, U64,  0, 12, ST.block(MD.EtFu, "modded_deepslate_ore"), 6, BIOMES_MAGICAL)
+		, new StoneLayerOres(MT.OREMATS.Uraninite                       , F, U64,  0, 12, ST.block(MD.EtFu, "modded_deepslate_ore"), 7, BIOMES_JUNGLE, BIOMES_RADIOACTIVE)
+		, new StoneLayerOres(MT.Th                                      , F, U64, 10, 20, ST.block(MD.EtFu, "modded_deepslate_ore"), 8, BIOMES_JUNGLE, BIOMES_RADIOACTIVE)
+		, new StoneLayerOres(MT.OREMATS.Scheelite                       , F, U64,  0, 12, ST.block(MD.EtFu, "modded_deepslate_ore"), 9, BIOMES_FROZEN)
+		, new StoneLayerOres(MT.TiO2                                    , F, U64,  0, 12, ST.block(MD.EtFu, "modded_deepslate_ore"),10, BIOMES_DESERT)
 		, new StoneLayerOres(MT.Au                                      , F, U32,  0, 16, ST.block(MD.EtFu, "deepslate_gold_ore"), BIOMES_MESA)
+		, new StoneLayerOres(MT.OREMATS.Bauxite                         , F, U32, 16, 32, ST.block(MD.EtFu, "modded_deepslate_ore"), 0, BIOMES_PLAINS)
+		, new StoneLayerOres(MT.MgCO3                                   , F, U32, 10, 20, ST.block(MD.EtFu, "modded_deepslate_ore"), 12, BIOMES_DESERT, BIOMES_VOLCANIC)
+		, new StoneLayerOres(MT.OREMATS.Borax                           , F, U32, 10, 20, ST.block(MD.EtFu, "modded_deepslate_ore"), 13, BIOMES_OCEAN, BIOMES_RIVER_LAKE)
+		, new StoneLayerOres(MT.OREMATS.Galena                          , F, U32,  0, 16, ST.block(MD.EtFu, "modded_deepslate_ore"), 2, BIOMES_MOUNTAINS)
+		, new StoneLayerOres(MT.Pb                                      , F, U16,  0, 32, ST.block(MD.EtFu, "modded_deepslate_ore"), 3, BIOMES_MOUNTAINS, BIOMES_WOODS)
 		, new StoneLayerOres(MT.Cu                                      , F, U16,  0, 32, ST.block(MD.EtFu, "deepslate_copper_ore"), BIOMES_DESERT, BIOMES_SAVANNA)
-		, new StoneLayerOres(MT.Fe                                      , F, U16,  0, 32, ST.block(MD.EtFu, "deepslate_iron_ore"), BIOMES_SWAMP, BIOMES_WOODS)
+		, new StoneLayerOres(MT.OREMATS.Cassiterite                     , F, U16,  0, 32, ST.block(MD.EtFu, "modded_deepslate_ore"), 1, BIOMES_FROZEN, BIOMES_JUNGLE)
+		, new StoneLayerOres(MT.OREMATS.Sphalerite                      , F, U16,  0, 32, ST.block(MD.EtFu, "modded_deepslate_ore"), 11, BIOMES_SAVANNA, BIOMES_SWAMP)
+		, new StoneLayerOres(MT.OREMATS.BrownLimonite                   , F, U16,  0, 32, ST.block(MD.EtFu, "deepslate_iron_ore"), BIOMES_SHROOM)
+		, new StoneLayerOres(MT.OREMATS.YellowLimonite                  , F, U16,  0, 32, ST.block(MD.EtFu, "deepslate_iron_ore"), BIOMES_SWAMP)
+		, new StoneLayerOres(MT.Fe2O3                                   , F, U16,  0, 32, ST.block(MD.EtFu, "deepslate_iron_ore"), BIOMES_WOODS)
+		, new StoneLayerOres(MT.OREMATS.Garnierite                      , F, U16,  0, 32, ST.block(MD.EtFu, "modded_deepslate_ore"), 4, BIOMES_SHROOM)
+		, new StoneLayerOres(MT.OREMATS.Pentlandite                     , F, U16,  0, 32, ST.block(MD.EtFu, "modded_deepslate_ore"), 4, BIOMES_SWAMP)
 		, new StoneLayerOres(MT.Coal                                    , F, U16,  0, 32, ST.block(MD.EtFu, "deepslate_coal_ore"), BIOMES_PLAINS, BIOMES_SHROOM)
 		, MD.Salt    .mLoaded ? new StoneLayerOres(MT.NaCl              , F, U32, 20, 32, ST.block(MD.Salt, "saltDeepslateOre")) : null
 		,!MT.Nikolite.mHidden ? new StoneLayerOres(MT.Nikolite          , F, U32,  0, 20) : null
@@ -253,10 +272,11 @@ public class Loader_Worldgen implements Runnable {
 		StoneLayer.LAYERS.add(new StoneLayer(BlocksGT.Marble, MT.STONES.Marble, ST.block(MD.EB, "enhancedbiomes.tile.stoneEB"), 7, ST.block(MD.EB, "enhancedbiomes.tile.stoneCobbleEB"), 7));
 		StoneLayer.LAYERS.add(new StoneLayer(BlocksGT.Marble, MT.STONES.Marble, ST.block(MD.PFAA, "strongStone"), 5, ST.block(MD.PFAA, "strongCobble"), 5));
 		StoneLayer.LAYERS.add(new StoneLayer(BlocksGT.Marble, MT.STONES.Marble, ST.block(MD.UB, "metamorphicStone"), 2+8, ST.block(MD.UB, "metamorphicCobblestone"), 2
+		, new StoneLayerOres(MT.OREMATS.Cassiterite     , U16, 20, 80)
 		, new StoneLayerOres(MT.Dioptase                , U64, 24, 48, BIOMES_MOUNTAINS)
 		));
 		StoneLayer.LAYERS.add(new StoneLayer(BlocksGT.Marble
-		, new StoneLayerOres(MT.OREMATS.Cassiterite     , U16, 40, 80)
+		, new StoneLayerOres(MT.OREMATS.Cassiterite     , U16, 20, 80)
 		, new StoneLayerOres(MT.OREMATS.Stannite        , U16, 38, 82)
 		, new StoneLayerOres(MT.OREMATS.Kesterite       , U16, 38, 82)
 		, new StoneLayerOres(MT.OREMATS.Sphalerite      , U8 , 10, 30)

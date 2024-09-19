@@ -6,22 +6,42 @@ Nothing (I tend to only add finished Stuff to the Changelog).
 
 
 6.17.02: (Not released yet)
-Nothing (I tend to only add finished Stuff to the Changelog).
+[FIXED] A bunch of Bugs related to saving and loading Worlds, in regards to GT6 Specific Data.
+[FIXED] Some Bug with Bukkit/Cauldron/etc. where things like Mini Portals and Ender Garbage Bins did not work correctly because of certain Events being thrown with weird Paths, triggering "loaded a different Save File" detection, which for Servers should flat out not be possible in the first place.
+[FIXED] Rivers, Lakes, Oceans and Beaches do no longer dry placed Grass Bales.
+[FIXED] Air vents were collecting Air even when submerged in Liquids or other Gasses.
+[FIXED] Somethign that made Mass Storages jam somehow, I think. I dont know how to repliciate it, so I dont know if it's fixed.
+[FIXED] Potion Fluids now use the Potion's getLiquidColor() instead of a hardcoded Texture.
+[CHANGED] Platinum Group Metals, their Sludge and Rare Earth now have better Thaumcraft Aspects.
+[CHANGED] Roasters of higher Tiers no longer have overclocking penalty.
+[CHANGED] Zirconium now has durability and speed identical to Diamonds.
+[CHANGED] Rock Salt is mostly named Sylvite now, except in its Dust form.
 
 
-6.17.01: (Not released yet)
-[TEST] Hey Bear, I need to to try kill the Minoshroom by punching a Hole into the Rooms Fence and shooting the Bow at it.
+6.17.01:
 [NOTE] My Minecraft Account is finally dead now (I hope), so do not trust anyone impersonating Greg or something. Anyways, screw MS for the way they handled Account Migration to the point I did not want to keep my Minecraft Account.
 [COMPAT] Added Thaumcraft Aspects to Twilight Forest Entities so you can actually recharge the Wand with the mobs there. Also Werebane works on Yetis now.
+[COMPAT] OpenComputers should work with GT6 Sensors now, through its Adapter. Finally...
+[COMPAT] Several Animal Mods have the additional Drops that I added in the previous Version.
 [FIXED] Swamp Water should no longer flood Twilight Mazes. Though existing Floods miiiight have some shroomy Side Effects.
 [CHANGED] Autosmelt on Tools works to make Charcoal again, even if the Charcoal Recipes do not exist in the Furnace.
 [CHANGED] Pickaxes now have the same Attack Damage Stats as the Axe, but they give twice the Invulnerability Frames to the opponent.
 [CHANGED] Construction Pickaxes will now always harvest Ender Chests as if Silk Touched. Obviously needs a Tier 3 Construction Pickaxe for that.
 [CHANGED] The GT6 Compasses that point to Coordinates will now jiggle the needle when you get really close to their target Coordinates.
+[CHANGED] Bumblebees now have a "Level" Tooltip indicating how far in their Evolution they are.
+[CHANGED] Cassiterite should be more than twice as likely to show up as an Ore Vein in Marble now.
+[CHANGED] Many of the Endstone and Netherack Dust Recipes in the Centrifuge have been tweaked a bit. also they allow Dust Blocks now.
+[CHANGED] Advanced Bumliaries are now only nerfed by half instead of quarter compared to the manual ones.
+[CHANGED] Pincers now work on Mass Storages and Dust Funnels.
+[ADDED] Sticks, Rocks and Bushes now have a Snow Layer when adjacent to any Snow Layer Blocks.
+[ADDED] More Biome Dependant Ores in the Deepslate/Slate Layer.
+[ADDED] Kilo-Bucket-O-Meter for when you need to measure really big Tanks. Do note that the Pressure Plates in the Fluid-O-Meter and the Bucket-O-Meter Recipe have changed slightly.
 [ADDED] Rightclicking a GT6 Chest with Pincers will pull its content into your Inventory, prioritizing stackable Items first. This should greatly help with sorting through the contents of Loot Chests you opened at your Base, like a sane person would do.
 [ADDED] Fireleaf which is Steeleaf but converted with Fiery Blood or Fiery Tears. It has Fortune III and Auto-Collect along with some other Stuff.
 [ADDED] Holy Water, Fiery Blood and Fiery Tears can be used in a Bath to add Enchantments to GT Arrows and GT Bullets.
 [ADDED] Twilight Forest Guide Book. I am finally done writing the thing. If you got one earlier dont worry, it updates itself automatically, unless you use a Language Pack.
+[ADDED] Builders Wand will place Glass and vanilla Wood Slabs around Thaumcraft Aura Nodes.
+[ADDED] Glowtus now has actually Material Data and can be ground down to a small amount of Glowstone.
 
 
 6.17.00:

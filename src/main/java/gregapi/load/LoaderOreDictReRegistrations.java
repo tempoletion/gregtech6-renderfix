@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023 GregTech-6 Team
+ * Copyright (c) 2024 GregTech-6 Team
  *
  * This file is part of GregTech.
  *
@@ -70,6 +70,13 @@ public class LoaderOreDictReRegistrations implements Runnable {
 		OreDictManager.INSTANCE.addAutoBlackListing("bucketMilk");
 		OreDictManager.INSTANCE.addAutoBlackListing("ingotEnrichedUranium");
 		OreDictManager.INSTANCE.addAutoBlackListing("IngotEnrichedUranium");
+		OreDictManager.INSTANCE.addAutoBlackListing("blockSolidGlass");
+		OreDictManager.INSTANCE.addAutoBlackListing(OD.blockGlassColorless);
+		OreDictManager.INSTANCE.addAutoBlackListing(OD.paneGlassColorless);
+		OreDictManager.INSTANCE.addAutoBlackListing(OD.glassColorless);
+		OreDictManager.INSTANCE.addAutoBlackListing(OD.blockGlass);
+		OreDictManager.INSTANCE.addAutoBlackListing(OD.paneGlass);
+		OreDictManager.INSTANCE.addAutoBlackListing(OD.glass);
 		
 		OreDictManager.INSTANCE.addAutoBlackListingForMod(MD.TFC.mID);
 		OreDictManager.INSTANCE.addAutoBlackListingForMod(MD.TFCP.mID);
@@ -610,6 +617,7 @@ public class LoaderOreDictReRegistrations implements Runnable {
 		OreDictManager.INSTANCE.addReRegistration(OD.itemLeatherHardened            , OD.craftingLeather);
 		OreDictManager.INSTANCE.addReRegistration(OD.itemLeatherImpregnated         , OD.craftingLeather);
 		OreDictManager.INSTANCE.addReRegistration(OD.itemFeather                    , OD.craftingFeather);
+		OreDictManager.INSTANCE.addReRegistration(OD.chocobofeather                 , OD.itemFeather);
 		OreDictManager.INSTANCE.addReRegistration(OD.itemFur                        , OD.craftingFur);
 		OreDictManager.INSTANCE.addReRegistration(OD.itemPelt                       , OD.craftingFur);
 		OreDictManager.INSTANCE.addReRegistration(OD.itemGrassTall                  , OD.itemGrass);

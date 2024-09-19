@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023 GregTech-6 Team
+ * Copyright (c) 2024 GregTech-6 Team
  *
  * This file is part of GregTech.
  *
@@ -222,8 +222,13 @@ public class MultiItemTool extends MultiItem implements IItemGTHandTool, IItemGT
 	}
 	
 	public float onBlockBreakSpeedEvent(float aDefault, ItemStack aStack, EntityPlayer aPlayer, Block aBlock, int aX, int aY, int aZ, byte aMeta, PlayerEvent.BreakSpeed aEvent) {
+		// Yeah no Bedrock breaking with these Tools.
 		if (aBlock == NB || WD.bedrock(aBlock)) return aDefault;
+		// Things that are normally harvested instantly, like Torches for example.
 		if (ST.instaharvest(aBlock, aMeta)) return Float.MAX_VALUE;
+		// special case for Obsidian to be mined faster with higher Quality Pickaxes.
+		if (OD.obsidian.is(ST.make(aBlock, 1, aMeta))) aDefault *= Math.max(1, getPrimaryMaterial(aStack).mToolQuality - 2);
+		// and now the basic Tool Stats.
 		IToolStats tStats = getToolStats(aStack);
 		return tStats == null ? aDefault : tStats.getMiningSpeed(aBlock, aMeta, aDefault, aPlayer, aPlayer.worldObj, aX, aY, aZ);
 	}
@@ -468,6 +473,8 @@ public class MultiItemTool extends MultiItem implements IItemGTHandTool, IItemGT
 		if (aBlock == NB || WD.bedrock(aBlock)) return 0;
 		if (ST.instaharvest(aBlock, aMeta)) return 10;
 		if (!isItemStackUsable(aStack)) return 0;
+		// Required because a combination of Twilight Forest and Block Metadata Extenders can fuck this up and give me values like 49 for vanilla Blocks.
+		if (aMeta > 15 && (aBlock == Blocks.dirt || aBlock == Blocks.grass || aBlock == Blocks.stone)) aMeta = 0;
 		float tMultiplier = 1.0F;
 		OreDictMaterial tMaterial = getPrimaryMaterial(aStack);
 		if ((IL.TF_Mazestone.equal(aBlock) || IL.TF_Mazehedge.equal(aBlock) || IL.TF_Towerwood.equal(aBlock)) && tMaterial.contains(TD.Properties.MAZEBREAKER)) tMultiplier *= 40;

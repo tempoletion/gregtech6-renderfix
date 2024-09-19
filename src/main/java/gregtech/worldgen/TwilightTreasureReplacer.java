@@ -92,6 +92,10 @@ public class TwilightTreasureReplacer extends TFTreasure {
 		// Hedge Maze
 		if (aIndex ==  4) {
 			mLootBag    =  0;
+			// ChocoCraft Gardens
+			if (MD.ChocoCraft.mLoaded) {ItemStack
+			tStack = ST.make(MD.ChocoCraft, "gysahlGreenBlock", 4, 0); if (ST.valid(tStack)) useless.add(tStack);
+			}
 			// Harvestcraft Gardens
 			if (MD.HaC.mLoaded) {ItemStack
 			tStack = ST.make(MD.HaC, "tropicalgarden", 4, 0); if (ST.valid(tStack)) useless.add(tStack);
@@ -247,7 +251,7 @@ public class TwilightTreasureReplacer extends TFTreasure {
 			mLootBag    =  1;
 		}
 		
-		// Stronghold Boss
+		// Phantoms
 		if (aIndex == 17) {
 			mLootBag    =  2;
 		}

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2023 GregTech-6 Team
+ * Copyright (c) 2024 GregTech-6 Team
  *
  * This file is part of GregTech.
  *
@@ -92,7 +92,7 @@ public class MultiItemBumbles extends MultiItemRandomWithCompat implements IItem
 		make(  420, "Alienated Bumblebee"       , "Doesn't feel comfortable with Society");
 		make(  430, "Nihilistic Bumblebee"      , "Who cares? Nothing matters.");
 		
-		make(  500, "Stoned Bumblebee"          , "Duuuude, I'm so damn biiig");
+		make(  500, "Stoned Bumblebee"          , "Duuuude");//Forgot to remove one reference last year. I need a new thing for the Stoner Bumble to say...
 		make(  510, "Rocking Bumblebee"         , "");
 		make(  520, "Hard Rock Bumblebee"       , "");
 		make(  530, "Bumbelvis"                 , "Has left the Building");
@@ -500,20 +500,22 @@ public class MultiItemBumbles extends MultiItemRandomWithCompat implements IItem
 	
 	@Override
 	public void addAdditionalToolTips(List<String> aList, ItemStack aStack, boolean aF3_H) {
-		String tTooltip = getFlowerTooltip(ST.meta_(aStack));
-		if (UT.Code.stringValid(tTooltip)) aList.add(LH.Chat.CYAN + "Requirement: " + LH.Chat.WHITE + tTooltip);
+		short aMeta = ST.meta_(aStack);
+		String tTooltip = getFlowerTooltip(aMeta);
+		if (UT.Code.stringValid(tTooltip)) aList.add(LH.Chat.CYAN + "Requirement:" + LH.Chat._WHITE + tTooltip);
 		NBTTagCompound aBumbleTag = null;
 		if (aStack.hasTagCompound()) aBumbleTag = aStack.getTagCompound().getCompoundTag("gt.bumble");
 		if (aBumbleTag == null || aBumbleTag.hasNoTags()) {
 			aList.add(LH.Chat.BLINKING_RED + "No Genetic Data to display");
 			aList.add(LH.Chat.CYAN + "Generates random 'Outsider-Plains-Biome' Genes when used");
 		} else {
-			if (ST.meta_(aStack) % 10 < 5) {
+			aList.add(LH.Chat.PURPLE + "Level:" + LH.Chat._PINK + (((aMeta / 10) % 10)+1) + LH.Chat._WHITE + "of" + LH.Chat._PINK + 4);
+			if (aMeta % 10 < 5) {
 				aList.add(LH.Chat.RED + "Not scanned yet!");
 			} else {
-				aList.add(LH.Chat.CYAN + "Humidity: " + LH.Chat.WHITE + Util.getHumidityMin(aBumbleTag) + " to " + Util.getHumidityMax(aBumbleTag) + LH.Chat.RED + "   Temp: " + LH.Chat.WHITE + Util.getTemperatureMin(aBumbleTag) + "K to " + Util.getTemperatureMax(aBumbleTag) + "K");
-				aList.add(LH.Chat.GREEN + "Offspring: " + LH.Chat.WHITE + Util.getOffspring(aBumbleTag) + LH.Chat.ORANGE + "   Life: " + LH.Chat.WHITE + Util.getLifeSpan(aBumbleTag) + " ticks");
-				aList.add(LH.Chat.YELLOW + "Eff: " + LH.Chat.WHITE + LH.percent(Util.getWorkForce(aBumbleTag)) + "%" + LH.Chat.RED + "   Aggro: " + LH.Chat.WHITE + LH.percent(Util.getAggressiveness(aBumbleTag)) + "%");
+				aList.add(LH.Chat.CYAN + "Humidity:" + LH.Chat._WHITE + Util.getHumidityMin(aBumbleTag) + " to " + Util.getHumidityMax(aBumbleTag) + LH.Chat.RED + "   Temp:" + LH.Chat._WHITE + Util.getTemperatureMin(aBumbleTag) + "K to " + Util.getTemperatureMax(aBumbleTag) + "K");
+				aList.add(LH.Chat.GREEN + "Offspring:" + LH.Chat._WHITE + Util.getOffspring(aBumbleTag) + LH.Chat.ORANGE + "   Life:" + LH.Chat._WHITE + Util.getLifeSpan(aBumbleTag) + " ticks");
+				aList.add(LH.Chat.YELLOW + "Eff:" + LH.Chat._WHITE + LH.percent(Util.getWorkForce(aBumbleTag)) + "%" + LH.Chat.RED + "   Aggro:" + LH.Chat._WHITE + LH.percent(Util.getAggressiveness(aBumbleTag)) + "%");
 				if (Util.getDayActive(aBumbleTag)) {
 					if (Util.getNightActive(aBumbleTag)) {
 						aList.add(LH.Chat.RAINBOW + "Doesn't take breaks");

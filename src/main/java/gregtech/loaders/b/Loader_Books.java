@@ -97,7 +97,7 @@ public class Loader_Books implements Runnable {
 		, "The first Hint is obvious: ALWAYS. READ. THE. ENTIRE. TOOLTIP. FIRST! The Tooltips often contain the Information you need, but not many people think about reading them. They usually contain all the Stats of the Machine."
 		, "If a Machine doesn't process a certain Recipe (but does others), then you are not supplying enough Power. This is ALWAYS the Issue. The Tier of a Machine determines how much more Energy it consumes, than the normal Recipe."
 		, "The Tiers of Machines are as follows: anything between 16 and 64 Generic Units per Tick is Tier ONE¶Tier 2: 65-256¶Tier 3: 257-1024¶Tier 4: 1025-4096¶Tier 5: 4097-16192"
-		, "If the Tier of the Machine you are using is in a higher Range than the Tier of the Recipe (see its GU/t) it will multiply the required Input GU/t by 4 and half the Processing time, making the Recipe twice as expensive."
+		, "If the Tier of the Machine you are using is in a higher Range than the Tier of the Recipe (see its GU/t) it will multiply the required Input GU/t by 4 and halve the Processing time, making the Recipe twice as expensive."
 		, "And yes, 64 GU/t is STILL TIER ONE, you seriously have to insert that much into a Tier 1 Machine! It is often possible to use the Motor/Heater/etc of a higher Tier on the lowest Power Input to get the GU/t."
 		, "GT6 Electric Power is widely compatible with all Mods that use the IC² API, such as:¶IC², IC²-Classic, IC²-Addons, Railcraft, Forestry and more!"
 		, "Things emitting a Voltage less than 1024 EU/t are even capable of powering the non-IC² Machines of the following Mods:¶Galacticraft and it's Addons, Applied Energistics, Immersive Engineering, OpenModularTurrets, TechGuns and even GT5U!"
@@ -141,6 +141,8 @@ public class Loader_Books implements Runnable {
 		, "Lich Tower¶===================¶Zombies and Shadowclones of the Lich will be summoned occassionally to distract you from the real Target. Avoid hitting the Shadowclones, but do kill the Zombies as they will swarm you otherwise."
 		, "Lich Tower¶===================¶The Lich Trophy you get can be used to produce QU through a Magic Field Absorber. The Scepter will either allow you to drain Life or to summon helpful Zombies. They can be reloaded in the crafting Grid."
 		, "Minoshroom Maze¶===================¶Each Fire Swamp is surrounded by four regular Swamps, which each contain a Maze full of Minotaurs, Slimes, annoying Insects, Loot and sometimes flooded with Swamp Water. Kill a Lich first before going here."
+		, "Minoshroom Maze¶===================¶Minotaurs will charge at you very quickly and from any angle. To easily get rid of the. use a Weapon with the Werebane Enchantment, which works on them and weakens them drastically."
+		, "Minoshroom Maze¶===================¶Maze Slimes behave like the normal ones and are just as vulnerable to the Dissolving Enchantment. If you have Thaumcraft, use the Fire Wand Focus for the tiny leftover Slimes, to save on your Weapons durability."
 		, "Minoshroom Maze¶===================¶Around the Entrance are a lot of Vines, harvest them with a Knife and craft Ropes out of them, which you can then use to get down the Hole. Bring extra Rope for going from the Upper Level to the Basement Level!"
 		, "Minoshroom Maze¶===================¶Try to follow the universal Rules of Maze traversal, which you could train over at the Hedge Maze. Placing Torches always on the righthand side Walls helps you find the way back easily."
 		, "Minoshroom Maze¶===================¶You may be able to find a Maze Map Focus in one of the Loot Chests. Use it to craft a Maze Map and rightclick it while you stand on the ground of the Basement Level. Dont waste it on the Upper Level!"
@@ -163,10 +165,13 @@ public class Loader_Books implements Runnable {
 		, "Knight Stronghold¶===================¶Speaking of Spikeball, you can craft one of those too from a lot of Knightmetal Ingots. Later there is even an upgrade to it to 'annihilate' your Enemies and the Terrain even more!"
 		, "Knight Stronghold¶===================¶There is a few 3 by 3 structures made of Stone Brick Stair Blocks. Remove one of those Stairs to reveal a trapped Loot Chest hidden inside of it. They are often hidden behind actual Staircases too."
 		, "Knight Stronghold¶===================¶Search the Stronghold until you find an Obsidian Wall visible behind some Iron Bars. Break through the Obsidian Wall into the Tomb behind it. The Phantoms will spawn once you enter."
+		, "Knight Stronghold¶===================¶A lot of times the Tombs are completely disconnected from the Entrance too, because the whole Stronghold does not generate well. Just dig around a little to see if something is behind a Wall."
 		, "Knight Stronghold¶===================¶The Phantoms will only track you down a limited distance and then go back to the Tomb, so you can bait them out and kill them one by one. They look more scary than they actually are."
-		, "Knight Stronghold¶===================¶Make sure to NOT place anything in the middle of the Tomb, such as Torches, because if the spot where the Loot Chest is supposed to be is blocked, it will not spawn."
+		, "Knight Stronghold¶===================¶They throw a LOT of Weapons at you, but they only really distract from their melee attacks. Phantoms do NOT count as Undead for the sake of the Smite Enchantment and Splash Potions of Harming."
+		, "Knight Stronghold¶===================¶Make sure to NOT place anything in the middle of the Tomb, such as Torches, because if the spot where the Loot Chest is supposed to be is blocked, it will not spawn!"
 		, "Knight Stronghold¶===================¶It is possible for there to be more than one Tomb, and every Tomb can be connected on four Sides, so breaking through the other Walls from the inside of the Tomb may unearth more of the Stronghold!"
-		, "Knight Stronghold¶===================¶Drops of the Phantoms are not worthwhile, but their Loot Chest is quite good. The Knightmetal Weapons supposedly deal +1 Heart of Extra Damage to the opponent (may be bugged, test it yourself)."
+		, "Knight Stronghold¶===================¶Killing the Phantoms will cause Mobs to no longer spawn inside the Stronghold, giving you an easier time to find more Tombs in there. However sometimes listening for hostile Mobs can point you places."
+		, "Knight Stronghold¶===================¶Weapons and Armor of the Phantoms are not special or worthwhile, so dont bother. The Knightmetal Weapons supposedly deal +1 Heart of Extra Damage to the opponent (may be bugged, test it yourself)."
 		, "Dark Tower¶===================¶Found in the center of the Dark Forest, the Dark Tower is the most complex Dungeon of the Twilight Forest in this Minecraft Version. You better bring a few Enderpearls and Ropes with you, just in case."
 		, "Dark Tower¶===================¶Getting to the Tower is honestly easiest if you just walk ontop of the Dark Forest itself, way less Bushes and Trees blocking your way. Not to mention you can easily see the Dark Tower from a distance."
 		, "Dark Tower¶===================¶If you just wanna cheat and pillar up to the Roof of the Tower, beware of the big Rooftop Ghasts that will likely knock you off the Pillar and to your Death. So maybe you should try take the normal Entrance."
@@ -663,7 +668,7 @@ public class Loader_Books implements Runnable {
 		"Heavy Water¶===================¶50 HU turns 1L of Heavy Water into 1L of Hot Heavy Water. Moderates any fuel rods inside. Divides maximum stat of fuel rods by 8.",
 		"Tritiated Water¶===================¶60 HU turns 1L of Tritiated Water into 1L of Hot Tritiated Water. Moderates any fuel rods inside. Divides maximum stat of fuel rods by 16.",
 		"Industrial Coolant¶===================¶20 HU turns 1L of Industrial Coolant into 1L of Industrial Heatant. Multiplies self stat of fuel rods by 4.",
-		"Multiplies emission stat of fuel rods by 4. factor stat of fuel rods by 2. Decreases divisor of factor stat of fuel rods by 1.",
+		"Multiplies emission stat of fuel rods by 4. Multiplies factor stat of fuel rods by 2.",
 		"Carbon Dioxide¶===================¶20 HU turns 1L of Carbon Dioxide into 1L of Hot Carbon Dioxide. Multiplies self stat of fuel rods by 3.",
 		"Helium¶===================¶30 HU turns 1L of Helium into 1L of Hot Helium. Divides emission stat of fuel rods by 2.",
 		"Molten Lithium Chloride¶===================¶15 HU turns 1L of Molten Lithium Chloride into 1L of Hot Molten Lithium Chloride. Multiplies self stat of fuel rods by 5. Divides emission stat of fuel rods by 2. Increases maximum stat of fuel rods by 25%",
@@ -691,7 +696,7 @@ public class Loader_Books implements Runnable {
 		"Since the neutron count on the fuel rod will be indefinitely increasing, you need to control the reaction so you won't output more power than you can handle.",
 		"Geiger counter sensors allow such control in an automatic fashion when combined with redstone machine switches or selectors.",
 		"So when the neutron count gets too high you want to turn a reactor rod off to make the fuel rod subcritical again, making the neutron count shrink.",
-		"For the greatest efficiency you want your neutron count one the fuel rod stay beneath the maximum stat of that fuel rod at all times, while coming as close to it as you can.",
+		"For the greatest efficiency you want your neutron count on the fuel rod stay beneath the maximum stat of that fuel rod at all times, while coming as close to it as you can.",
 		"You'd also want the neutron count to shrink as little as possible when controlling the reactor, so your average HU output stays as high as possible.",
 		"Therefore you need a fuel with a factor of at least 1/4 to be able to build a critical reactor without the use of moderator rods.",
 		"The easiest to acquire fuel that fulfills this condition is Uranium 235. You can get it by processing Uraninite. When using moderator rods the fuel can have a factor down to 1/16, so using Uranium 238 is possible.",
@@ -705,7 +710,7 @@ public class Loader_Books implements Runnable {
 		"so 68 times faster, times 4 if the rod is moderated, so 272 times faster than an unmoderated rod with neutron counts below the neutron maximum.",
 		"Instead of significantly increasing the neutron count on the fuel rod, it is also possible to lower the neutron maximum to take advantage of this effect.",
 		"This can be easily done by using either Heavy or Tritiated Water, which lower the maximum stat by 8 and 16 times respectively and additionally also moderate all fuel rods because they are water based.",
-		"To archive really high neutron counts, it is advisable to utilize a critical reactor design, though it is also feasible to run a burner reactor as a stable design.",
+		"To achieve really high neutron counts, it is advisable to utilize a critical reactor design, though it is also feasible to run a burner reactor as a stable design.",
 		"Cobalt 60, while being almost useless as a reactor fuel itself, is really easy to burn into Thorium, which is much more useful.",
 		"¶¶===================¶Breeder Reactor Design Guidelines¶===================¶",
 		"Breeder reactors have the goal of turning breeder rods into enriched rods. They allow getting really good nuclear fuel from lesser, more abundant fuels, like Thorium and Uranium 238.",
