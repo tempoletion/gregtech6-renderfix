@@ -33,5 +33,7 @@ jobs:
         key: .gradle
     - name: Build SNAPSHOT with Gradle
       run: ./gradlew build
-    - name: locatd the build
-      run: ls -la build/generated/sources
+    -  uses: actions/upload-artifact@v4
+      with:
+        name: build
+        path: build/**/gregtech?
