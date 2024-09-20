@@ -32,4 +32,4 @@ jobs:
           ~/.gradle
         key: .gradle
     - name: Build SNAPSHOT with Gradle
-      run: ./gradle build
+      run: ./gradlew build
