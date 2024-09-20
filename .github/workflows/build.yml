@@ -33,3 +33,5 @@ jobs:
         key: .gradle
     - name: Build SNAPSHOT with Gradle
       run: ./gradlew build
+    - name: locatd the build
+      run: ls -la
