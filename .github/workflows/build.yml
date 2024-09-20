@@ -34,4 +34,4 @@ jobs:
     - name: Build SNAPSHOT with Gradle
       run: ./gradlew build
     - name: locatd the build
-      run: ls -la build/generated
+      run: ls -la build/generated/source
