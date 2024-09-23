@@ -130,10 +130,10 @@ public class RenderHelper {
 				GL11.glVertex3f(+0.25, 0, -0.25);
 			}
 			if (FACE_CONNECTED[SIDE_UP][aConnections]) {
-				GL11.glVertex3f(-0.50, 0, -0.50);
-				GL11.glVertex3f(-0.25, 0, -0.25);
-				GL11.glVertex3f(-0.50, 0, -0.25);
-				GL11.glVertex3f(-0.25, 0, -0.50);
+				GL11.glVertex3d(-0.50, 0, -0.50);
+				GL11.glVertex3d(-0.25, 0, -0.25);
+				GL11.glVertex3d(-0.50, 0, -0.25);
+				GL11.glVertex3d(-0.25, 0, -0.50);
 				
 				GL11.glVertex3d(+0.50, 0, +0.50);
 				GL11.glVertex3d(+0.25, 0, +0.25);
